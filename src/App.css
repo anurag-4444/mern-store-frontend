@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,900;1,200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "./component/home/home.css";
+@import "./component/header/header.css";
+@import "./component/filter/applyFilters.css";
+@import "./component/footer/footer.css";
+@import "./component/product/productDetails.css";
+@import "./component/productCard/reviewCard.css";
+
+*,body{
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.content-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+@media screen and (max-width: 768px) {
+    .content-container{
+        grid-template-columns: 1fr;
+    }
+}

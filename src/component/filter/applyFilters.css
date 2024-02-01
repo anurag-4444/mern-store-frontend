@@ -1,0 +1,97 @@
+:root {
+    --naam: rgb(255, 164, 28);
+}
+
+
+
+.filter-section {
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-left: 0;
+    padding: 10px;
+    /* width: 200px; */
+}
+
+.filter-category {
+    margin-bottom: 20px;
+}
+
+.filter-category h4 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.filter-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-category li {
+    margin-bottom: 5px;
+}
+
+.apply-filters {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/*  */
+
+.list-group h5 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.list-group ul {
+    padding: 0;
+}
+
+.list-group ul li {
+    border: 0;
+    /* color: blue; */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.category li {
+    cursor: pointer;
+    width: fit-content;
+    padding: 0;
+    margin: 0 1rem;
+
+}
+
+.category li:hover {
+    color: var(--naam) !important;
+
+}
+
+.apply-filter-btn {
+    background-color: white;
+    color: #2874f0;
+    border: 1px solid #2874f0;
+    transition: all .5s;
+}
+
+.apply-filter-btn:hover {
+    background-color: #2874f0;
+    color: white;
+}
+
+.rating-filter div {
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    transition: color .5s;
+    cursor: pointer;
+}
+
+.rating-filter div:hover {
+    color: rgb(255, 164, 28);
+    border-bottom: 1px solid rgb(255, 164, 28) !important;
+}
+

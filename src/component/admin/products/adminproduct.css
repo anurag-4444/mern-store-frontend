@@ -1,0 +1,7 @@
+.edit-delete:hover{
+    color: #5c5c5c;
+}
+
+.remove-scrollbar::-webkit-scrollbar{
+    display: none;
+}

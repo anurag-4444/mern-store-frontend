@@ -1,0 +1,38 @@
+.login-signup-container {
+    background-image: url(./bg-registration-form-1.jpg);
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-signup-container div div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.login-signup-container div {
+    background-color: white;
+}
+
+.login-signup-container div div:first-child {
+    padding-left: 0;
+}
+
+.login-signup-container div div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .login-signup-container div div:first-child {
+        display: none;
+    }
+
+    .login-signup-container div {
+        height: 30% !important;
+    }
+}

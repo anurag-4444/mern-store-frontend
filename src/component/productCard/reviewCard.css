@@ -1,0 +1,113 @@
+.reviews-section {
+    margin-top: 20px;
+}
+
+.reviews-heading {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.review {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+    flex-wrap: wrap;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.review-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.review-comment {
+    font-size: 0.9rem;
+}
+
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    /* margin-left: calc(var(--bs-gutter-x) * .5); */
+    /* margin-right: calc(var(--bs-gutter-x) * .5); */
+    padding: 0.5rem 1rem;
+     /* Adjusted padding using rem units */
+    background-color: #eaeaea;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: clamp(0.9rem, 3vw, 1.1rem); /* Responsive font size */
+    border-radius: 5px; /* Optional: rounded edges for the button */
+    text-align: center; /* Ensuring text is centered */
+    width: fit-content; /* The button width will be determined by its content and padding */
+}
+
+.load-more-btn:hover {
+    background-color: #d1d1d1;
+}
+
+@media (max-width: 768px) {
+
+    .reviews-heading {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .review-content {
+        flex: 1;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-name {
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .review-comment {
+        font-size: 0.85rem;
+        margin-top: 5px;
+    }
+
+    .load-more-btn {
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* To ensure padding doesn't increase the button's width */
+    }
+
+}
