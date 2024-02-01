@@ -6,7 +6,7 @@ export const adminFetchAllProducts = createAsyncThunk(
   async (args) => {
     const { keyword = "", currentPage = 1, minPrice = 0, maxPrice = 25000, category, ratings = 0, all } = args || {};
 
-    let link = `http://localhost:5000/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${minPrice}&price[lte]=${maxPrice}&ratings[gte]=${ratings}`
+    let link = `https://mern-store-backend-iaep.onrender.com/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${minPrice}&price[lte]=${maxPrice}&ratings[gte]=${ratings}`
 
     // If category is present, include it in the link
     if (category) {
@@ -26,7 +26,7 @@ export const adminFetchAllProducts = createAsyncThunk(
 export const fetchProductDetail = createAsyncThunk(
   'product/fetchDetail',
   async (id) => {
-    const response = await axios.get(`http://localhost:5000/api/v1/product/${id}`);
+    const response = await axios.get(`https://mern-store-backend-iaep.onrender.com/api/v1/product/${id}`);
     return response.data;
   }
 );
@@ -35,7 +35,7 @@ export const adminCreateProduct = createAsyncThunk(
   'products/admin-create-product',
   async (formData) => {
     // console.log(formData);
-    const response = await axios.post(`http://localhost:5000/api/v1/admin/product/new`, formData, {
+    const response = await axios.post(`https://mern-store-backend-iaep.onrender.com/api/v1/admin/product/new`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -49,7 +49,7 @@ export const adminUpdateProduct = createAsyncThunk(
   'products/admin-update-product',
   async ({ formData, id }) => {
     // console.log(formData);
-    const response = await axios.put(`http://localhost:5000/api/v1/admin/product/${id}`, formData, {
+    const response = await axios.put(`https://mern-store-backend-iaep.onrender.com/api/v1/admin/product/${id}`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -63,7 +63,7 @@ export const adminDeleteProduct = createAsyncThunk(
   'products/admin-delete-product',
   async (id) => {
     // console.log('delte admi');
-    const response = await axios.delete(`http://localhost:5000/api/v1/admin/product/${id}`)
+    const response = await axios.delete(`https://mern-store-backend-iaep.onrender.com/api/v1/admin/product/${id}`)
     return response.data
   }
 );
@@ -71,7 +71,7 @@ export const adminDeleteProduct = createAsyncThunk(
 export const adminFetchAllOrders = createAsyncThunk(
   'orders/adminFetchAllOrders',
   async () => {
-    let link = `http://localhost:5000/api/v1/admin/orders`
+    let link = `https://mern-store-backend-iaep.onrender.com/api/v1/admin/orders`
     const response = await axios.get(link);
     return response.data;
   }
@@ -80,7 +80,7 @@ export const adminFetchAllOrders = createAsyncThunk(
 export const adminDeleteOrder = createAsyncThunk(
   'order/admin-delete-order',
   async (id) => {
-    const response = await axios.delete(`http://localhost:5000/api/v1/admin/order/${id}`)
+    const response = await axios.delete(`https://mern-store-backend-iaep.onrender.com/api/v1/admin/order/${id}`)
     return response.data
   }
 );
@@ -88,7 +88,7 @@ export const adminDeleteOrder = createAsyncThunk(
 export const adminGetOrder = createAsyncThunk(
   'order/admin-get-order',
   async (id) => {
-    const response = await axios.get(`http://localhost:5000/api/v1/order/${id}`)
+    const response = await axios.get(`https://mern-store-backend-iaep.onrender.com/api/v1/order/${id}`)
     return response.data
   }
 );
@@ -97,7 +97,7 @@ export const adminUpdateOrder = createAsyncThunk(
   'order/admin-update-order',
   async ({ id, status }) => {
     // console.log(formData);
-    const response = await axios.put(`http://localhost:5000/api/v1/admin/order/${id}`, { status }, {
+    const response = await axios.put(`https://mern-store-backend-iaep.onrender.com/api/v1/admin/order/${id}`, { status }, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -110,7 +110,7 @@ export const adminUpdateOrder = createAsyncThunk(
 export const adminFetchAllUsers = createAsyncThunk(
   'users/admim-fetch-all-users',
   async () => {
-    let link = `http://localhost:5000/api/v1/admin/users`
+    let link = `https://mern-store-backend-iaep.onrender.com/api/v1/admin/users`
     const response = await axios.get(link);
     return response.data;
   }
@@ -119,7 +119,7 @@ export const adminFetchAllUsers = createAsyncThunk(
 export const adminUpdateUser = createAsyncThunk(
   'users/admim-update-user',
   async ({ id, role }) => {
-    const response = await axios.put(`http://localhost:5000/api/v1/admin/user/${id}`, { role }, {
+    const response = await axios.put(`https://mern-store-backend-iaep.onrender.com/api/v1/admin/user/${id}`, { role }, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -131,7 +131,7 @@ export const adminUpdateUser = createAsyncThunk(
 export const adminDeleteUser = createAsyncThunk(
   'users/admim-delete-user',
   async (id) => {
-    const response = await axios.delete(`http://localhost:5000/api/v1/admin/user/${id}`)
+    const response = await axios.delete(`https://mern-store-backend-iaep.onrender.com/api/v1/admin/user/${id}`)
     return response.data;
   }
 );
@@ -139,7 +139,7 @@ export const adminDeleteUser = createAsyncThunk(
 export const adminFetchAllReviews = createAsyncThunk(
   'users/admim-fetch-all-reviews',
   async (id) => {
-    let link = `http://localhost:5000/api/v1/reviews?id=${id}`
+    let link = `https://mern-store-backend-iaep.onrender.com/api/v1/reviews?id=${id}`
     const response = await axios.get(link);
     return response.data;
   }
@@ -148,7 +148,7 @@ export const adminFetchAllReviews = createAsyncThunk(
 export const adminDeleteReview = createAsyncThunk(
   'users/admim-delete-review',
   async ({ reviewId, productId }) => {
-    let link = `http://localhost:5000/api/v1/reviews?id=${reviewId}&productId=${productId}`
+    let link = `https://mern-store-backend-iaep.onrender.com/api/v1/reviews?id=${reviewId}&productId=${productId}`
     const response = await axios.delete(link);
     return response.data;
   }

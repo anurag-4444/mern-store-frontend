@@ -6,9 +6,9 @@ export const fetchAllProducts = createAsyncThunk(
   async (args) => {
     const { keyword = "", currentPage = 1, minPrice = 0, maxPrice = 25000, category, ratings = 0 } = args || {};
 
-    let link = `http://localhost:5000/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${minPrice}&price[lte]=${maxPrice}&ratings[gte]=${ratings}`
+    let link = `https://mern-store-backend-iaep.onrender.com/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${minPrice}&price[lte]=${maxPrice}&ratings[gte]=${ratings}`
 
-    if (category) link = `http://localhost:5000/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${minPrice}&price[lte]=${maxPrice}&category=${category}&ratings[gte]=${ratings}`
+    if (category) link = `https://mern-store-backend-iaep.onrender.com/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${minPrice}&price[lte]=${maxPrice}&category=${category}&ratings[gte]=${ratings}`
 
     const response = await axios.get(link);
     return response.data;

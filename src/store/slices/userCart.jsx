@@ -5,7 +5,7 @@ export const addProductToCart = createAsyncThunk(
     'user/addToCart',
     async (args) => {
 
-        const response = await axios.post(`http://localhost:5000/api/v1/me/add/product/cart`, { ...args }, {
+        const response = await axios.post(`https://mern-store-backend-iaep.onrender.com/api/v1/me/add/product/cart`, { ...args }, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -17,7 +17,7 @@ export const addProductToCart = createAsyncThunk(
 export const getProductToCart = createAsyncThunk(
     'user/getFromCart',
     async () => {
-        const response = await axios.get(`http://localhost:5000/api/v1/me/product/cart`,{ withCredentials: true })
+        const response = await axios.get(`https://mern-store-backend-iaep.onrender.com/api/v1/me/product/cart`,{ withCredentials: true })
         return response.data
     }
 );
@@ -26,7 +26,7 @@ export const deleteProductToCart = createAsyncThunk(
     'user/deleteFromCart',
     async (args) => {
         console.log(args);
-        const response = await axios.delete(`http://localhost:5000/api/v1/me/delete/product/cart`, { data: args }, {
+        const response = await axios.delete(`https://mern-store-backend-iaep.onrender.com/api/v1/me/delete/product/cart`, { data: args }, {
             headers: {
                 'Content-Type': 'application/json'
             }

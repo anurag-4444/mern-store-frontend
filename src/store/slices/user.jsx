@@ -9,7 +9,7 @@ export const fetchUserProfile = createAsyncThunk(
         const token = googleResponse.credential;
 
         // Send token to backend for verification and further processing
-        const response = await axios.post(`http://localhost:5000/api/v1/auth/google`, { token }, {
+        const response = await axios.post(`https://mern-store-backend-iaep.onrender.com/api/v1/auth/google`, { token }, {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -26,7 +26,7 @@ export const fetchProfileDetails = createAsyncThunk(
         } catch (error) {
             
         }
-        const link = `http://localhost:5000/api/v1/me`
+        const link = `https://mern-store-backend-iaep.onrender.com/api/v1/me`
 
         // const response = await axios.get(link);
         const response = await axios.get(link);
@@ -37,7 +37,7 @@ export const fetchProfileDetails = createAsyncThunk(
 export const logoutUser = createAsyncThunk(
     'user/logout',
     async () => {
-        const link = `http://localhost:5000/api/v1/logout`
+        const link = `https://mern-store-backend-iaep.onrender.com/api/v1/logout`
         const response = await axios.get(link);
         return response.data;
     }

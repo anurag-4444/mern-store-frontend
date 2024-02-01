@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchProductDetail = createAsyncThunk(
   'product/fetchDetail',
   async (id) => {
-    const response = await axios.get(`http://localhost:5000/api/v1/product/${id}`);
+    const response = await axios.get(`https://mern-store-backend-iaep.onrender.com/api/v1/product/${id}`);
     return response.data;
   }
 );
@@ -12,7 +12,7 @@ export const fetchProductDetail = createAsyncThunk(
 export const postReviewOfProduct = createAsyncThunk(
   'product/postReivew',
   async (args) => {
-    const response = await axios.put(`http://localhost:5000/api/v1/review`, { ...args }, {
+    const response = await axios.put(`https://mern-store-backend-iaep.onrender.com/api/v1/review`, { ...args }, {
       headers: {
         'Content-Type': 'application/json'
       }

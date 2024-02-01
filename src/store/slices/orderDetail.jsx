@@ -4,7 +4,7 @@ import axios from "axios";
 export const getProductCart = createAsyncThunk(
     'user/getFromCart',
     async () => {
-        const response = await axios.get(`http://localhost:5000/api/v1/me/product/cart`,{ withCredentials: true })
+        const response = await axios.get(`https://mern-store-backend-iaep.onrender.com/api/v1/me/product/cart`,{ withCredentials: true })
         return response.data
     }
 );
@@ -12,7 +12,7 @@ export const getProductCart = createAsyncThunk(
 export const addNewOrder = createAsyncThunk(
     'user/addOrder',
     async (args) => {
-        const response = await axios.post(`http://localhost:5000/api/v1/order/new`, { ...args }, {
+        const response = await axios.post(`https://mern-store-backend-iaep.onrender.com/api/v1/order/new`, { ...args }, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -24,7 +24,7 @@ export const addNewOrder = createAsyncThunk(
 export const getOrder = createAsyncThunk(
     'user/getOrder',
     async () => {
-        const response = await axios.get(`http://localhost:5000/api/v1/orders/me`, { withCredentials: true })
+        const response = await axios.get(`https://mern-store-backend-iaep.onrender.com/api/v1/orders/me`, { withCredentials: true })
         return response.data
     }
 );

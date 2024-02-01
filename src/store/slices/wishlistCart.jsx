@@ -5,7 +5,7 @@ export const addProductToWishlist = createAsyncThunk(
     'user/addToWishlist',
     async (args) => {
         // console.log('wishlist slice');
-        const response = await axios.post(`http://localhost:5000/api/v1/me/add/product/wishlist`, { ...args }, {
+        const response = await axios.post(`https://mern-store-backend-iaep.onrender.com/api/v1/me/add/product/wishlist`, { ...args }, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -17,7 +17,7 @@ export const addProductToWishlist = createAsyncThunk(
 export const getProductFromWishlist = createAsyncThunk(
     'user/getFromWishlist',
     async () => {
-        const response = await axios.get(`http://localhost:5000/api/v1/me/product/wishlist`,{ withCredentials: true })
+        const response = await axios.get(`https://mern-store-backend-iaep.onrender.com/api/v1/me/product/wishlist`,{ withCredentials: true })
         return response.data
     }
 );
@@ -26,7 +26,7 @@ export const deleteProductFromWishlist = createAsyncThunk(
     'user/deleteFromWishlist',
     async (args) => {
         // console.log(args);
-        const response = await axios.delete(`http://localhost:5000/api/v1/me/delete/product/wishlist`, { data: args }, {
+        const response = await axios.delete(`https://mern-store-backend-iaep.onrender.com/api/v1/me/delete/product/wishlist`, { data: args }, {
             headers: {
                 'Content-Type': 'application/json'
             }

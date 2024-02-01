@@ -6,7 +6,7 @@ export const updateUserName = createAsyncThunk(
     async (args) => {
         const { userName } = args || {};
 
-        const response = await axios.put(`http://localhost:5000/api/v1/me/update`, { name: userName }, {
+        const response = await axios.put(`https://mern-store-backend-iaep.onrender.com/api/v1/me/update`, { name: userName }, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -20,7 +20,7 @@ export const updateUserAvatar = createAsyncThunk(
     async (args) => {
         const { avatar } = args || {};
 
-        const response = await axios.put(`http://localhost:5000/api/v1/me/update/avatar`, avatar, {
+        const response = await axios.put(`https://mern-store-backend-iaep.onrender.com/api/v1/me/update/avatar`, avatar, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
